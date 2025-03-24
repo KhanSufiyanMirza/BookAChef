@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',  // Enable static HTML export
   distDir: 'out',    // Output directory
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/BookAChef' : '',  // GitHub Pages repo name
   basePath: process.env.NODE_ENV === 'production' ? '/BookAChef' : '',  // GitHub Pages repo name
   images: {
     remotePatterns: [
