@@ -40,14 +40,15 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: Add .nojekyll file and copy static files
-        run: |
-          touch out/.nojekyll
+      - name: Add .nojekyll file
+        run: touch out/.nojekyll
           
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
+          name: github-pages
           path: out
+          if-no-files-found: error
 
   # Deployment job
   deploy:
