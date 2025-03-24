@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-dark bg-light transition-colors duration-200;
+  }
+  
+  .dark body {
+    @apply text-dark-text bg-dark-bg;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-bold py-3 px-6 rounded-full transition-all hover:bg-opacity-90 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white font-bold py-3 px-6 rounded-full transition-all hover:bg-opacity-90 hover:shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-bold py-3 px-6 rounded-full transition-all hover:bg-primary hover:text-white hover:shadow-lg dark:text-dark-text;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 md:px-8;
+  }
+  
+  .section {
+    @apply py-12 md:py-24;
+  }
+  
+  /* Dark mode card styles */
+  .dark .bg-white, 
+  .dark .bg-light {
+    @apply bg-dark-surface text-dark-text;
+  }
+  
+  .dark .text-dark {
+    @apply text-dark-text;
+  }
+  
+  .dark .text-gray-600 {
+    @apply text-gray-300;
+  }
+  
+  .dark .border-gray-100,
+  .dark .border-gray-200 {
+    @apply border-gray-800;
+  }
+  
+  .dark .shadow-md,
+  .dark .shadow-lg,
+  .dark .shadow-xl,
+  .dark .shadow-2xl {
+    @apply shadow-gray-900;
+  }
+  
+  /* Dark mode toggle button */
+  .theme-toggle-btn {
+    @apply p-2 rounded-full transition-colors;
+  }
+  
+  .dark .theme-toggle-btn {
+    @apply bg-gray-800 text-yellow-300;
+  }
+  
+  .theme-toggle-btn {
+    @apply bg-gray-100 text-gray-800;
+  }
+} 
