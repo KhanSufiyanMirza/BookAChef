@@ -19,6 +19,19 @@ const nextConfig = {
     unoptimized: true,  // Required for static export
   },
   trailingSlash: true,  // Add trailing slashes for GitHub Pages compatibility
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
 };
+
+// Handle GitHub Pages path prefix
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+if (isGithubActions) {
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
+  nextConfig.basePath = `/${repo}`;
+  nextConfig.assetPrefix = `/${repo}`;
+}
 
 module.exports = nextConfig; 
