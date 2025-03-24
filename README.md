@@ -8,15 +8,16 @@ BookAChef is a modern landing page for a private chef booking platform that conn
 - **Modern UI**: Clean and professional design with intuitive user experience
 - **SEO Optimized**: Built with search engine optimization best practices
 - **Performance Focused**: Fast loading and optimized for best user experience
+- **Dark Mode Support**: Elegant dark mode implementation for comfortable browsing
 
 ## 📱 Sections
 
-1. **Hero Section**: Eye-catching headline, subheading, and app download CTAs
+1. **Hero Section**: Eye-catching headline, subheading, automatic image slider, and app download CTAs
 2. **How It Works**: Simple 4-step process explaining the booking journey
 3. **Why Choose Us**: Key benefits and value propositions of the platform
 4. **Featured Chefs & Testimonials**: Showcase of chef profiles and customer reviews
 5. **FAQs**: Common questions and answers about the service
-6. **Contact & Support**: Contact form and support information
+6. **Contact & Support**: Contact form and support information with WhatsApp integration
 7. **Footer**: SEO-optimized with quick links and app download options
 
 ## 🚀 Technologies
@@ -120,15 +121,27 @@ The landing page promotes mobile app downloads with:
 
 - **App Store Links**: Links to download from Apple App Store
 - **Google Play Links**: Links to download from Google Play Store
-- **QR Codes**: Can be added for easy app downloads
+
+## 📞 Contact
+
+For any questions or inquiries, please reach out via:
+
+- Phone: +91 81084 32256
+- WhatsApp: [Chat on WhatsApp](https://wa.me/918108432256)
+- Email: support@bookachef.com
+
+## Deployment
+
+This site is deployed using GitHub Pages. To deploy your own version:
+
+1. Push your code to a GitHub repository
+2. Go to repository Settings > Pages
+3. Select the main branch and the root directory
+4. Click Save to deploy your site
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👥 Contact
-
-For any questions or inquiries, please reach out to support@bookachef.com.
 
 ---
 
