@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
+const withExportImages = require('next-export-optimize-images');
+
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',  // Enable static HTML export
-  distDir: 'out',    // Output directory
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/BookAChef' : '',  // GitHub Pages repo name
-  basePath: process.env.NODE_ENV === 'production' ? '/BookAChef' : '',  // GitHub Pages repo name
   images: {
     remotePatterns: [
       {
@@ -18,20 +17,7 @@ const nextConfig = {
     ],
     unoptimized: true,  // Required for static export
   },
-  trailingSlash: true,  // Add trailing slashes for GitHub Pages compatibility
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
-  },
+  // GitHub Pages will automatically handle the basePath with actions/configure-pages@v5
 };
 
-// Handle GitHub Pages path prefix
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
-if (isGithubActions) {
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
-  nextConfig.basePath = `/${repo}`;
-  nextConfig.assetPrefix = `/${repo}`;
-}
-
-module.exports = nextConfig; 
+module.exports = withExportImages(nextConfig); 
