@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const withExportImages = require('next-export-optimize-images');
-
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',  // Enable static HTML export
@@ -22,4 +20,4 @@ const nextConfig = {
   trailingSlash: true,  // Add trailing slashes for GitHub Pages compatibility
 };
 
-module.exports = withExportImages(nextConfig); 
+module.exports = nextConfig; 
