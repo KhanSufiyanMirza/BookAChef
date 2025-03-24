@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect, useCallback } from 'react';
+import imageLoader from '../lib/image-loader';
 
 export default function HeroSection() {
   const images = [
@@ -172,6 +173,7 @@ export default function HeroSection() {
                         className="object-cover"
                         fill
                         priority={index === 0}
+                        loader={imageLoader}
                       />
                     </div>
                   ))}

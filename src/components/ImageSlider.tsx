@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import imageLoader from '../lib/image-loader';
 
 interface ImageSliderProps {
   images: {
@@ -72,6 +73,7 @@ export default function ImageSlider({
               fill
               className="object-cover"
               priority={index === 0}
+              loader={imageLoader}
             />
             {/* Gradient overlay to improve text visibility */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60"></div>
@@ -105,6 +107,7 @@ export default function ImageSlider({
               alt={`Thumbnail for ${image.alt}`}
               fill
               className="object-cover"
+              loader={imageLoader}
             />
             {index !== activeIndex && (
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300"></div>

@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import imageLoader from '../lib/image-loader';
 
 export default function FeaturedChefs() {
   const [activeTab, setActiveTab] = useState('chefs');
@@ -115,6 +116,7 @@ export default function FeaturedChefs() {
                     alt={chef.name}
                     fill
                     className="object-cover"
+                    loader={imageLoader}
                   />
                 </div>
                 <div className="p-6">
@@ -153,6 +155,7 @@ export default function FeaturedChefs() {
                       alt={testimonial.name}
                       fill
                       className="rounded-full object-cover"
+                      loader={imageLoader}
                     />
                   </div>
                   <div>

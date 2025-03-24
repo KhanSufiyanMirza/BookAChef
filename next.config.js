@@ -5,6 +5,8 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',  // Enable static HTML export
   images: {
+    loader: 'custom',
+    loaderFile: './src/lib/image-loader.ts',
     remotePatterns: [
       {
         protocol: 'https',
@@ -15,7 +17,7 @@ const nextConfig = {
         hostname: 'randomuser.me',
       },
     ],
-    unoptimized: true,  // Required for static export
+    // The next-export-optimize-images plugin handles image optimization itself
   },
   // GitHub Pages will automatically handle the basePath with actions/configure-pages@v5
 };

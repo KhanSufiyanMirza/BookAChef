@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import imageLoader from '../lib/image-loader';
 
 export default function HowItWorks() {
   const steps = [
@@ -115,6 +116,7 @@ export default function HowItWorks() {
                 width={300}
                 height={600}
                 className="rounded-3xl shadow-xl dark:shadow-black/50 mx-auto"
+                loader={imageLoader}
               />
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary rounded-full opacity-20 dark:opacity-30 z-0"></div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary rounded-full opacity-20 dark:opacity-30 z-0"></div>
